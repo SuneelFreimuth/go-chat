@@ -1,0 +1,57 @@
+:root {
+    --border-radius: 5px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-container {
+    width: 400px;
+    border: 1px solid lightgrey;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    border-radius: var(--border-radius);
+}
+
+.chat-container .chat-messages {
+    flex: 1;
+}
+
+.chat-container input {
+    border: none;
+    border-top: 1px solid lightgrey;
+    height: 1.1rem;
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.chat-container input:active, .chat-container input:focus {
+    outline: none;
+}
+
+.message {
+    border-bottom: 1px solid lightgrey;
+    margin: 5px;
+    padding: 0;
+}
+
+/* Last message sent. */
+.chat-messages:last-child {
+    border: none;
+}
+
+.message .author {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.message .body {
+    margin: 5px 0;
+    padding: 0;
+}
